@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Playa Paraíso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-image">
+        <div class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <div class="container" id="inicio">
+            <h1>Hotel Playa Paraíso</h1>
+            <p>Bienvenido al Hotel Playa Paraíso, donde el lujo y la comodidad se encuentran frente al mar.</p>
+        </div>
+    </div>
+    <div class="services" id="servicios">
+        <h2>Sol & Relax</h2>
+        <p>
+            Inspirado en la serenidad y belleza de las playas del norte de Perú, "Hotel Playa Paraíso" es un refugio
+            único y encantador. Aquí, la naturaleza se mezcla con la comodidad para ofrecerte una experiencia
+            verdaderamente inolvidable.
+            Desde el primer rayo de sol hasta el ocaso, nuestros huéspedes pueden disfrutar de momentos de paz y
+            tranquilidad en un entorno familiar y amigable.
+        </p>
+        <p>
+            Nuestro objetivo es brindar a cada visitante una estadía memorable y llena de confort. Contamos con un
+            personal altamente capacitado y una infraestructura diseñada para satisfacer todas tus necesidades y deseos. 
+            Ven y descubre un lugar donde el tiempo se detiene y cada instante es un tesoro.
+        </p>
+    </div>
+    <div class="contact" id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Email:</strong>info@hotelplayaparaiso.com</p>
+        <p><strong>Teléfono:</strong> (+51) 123456789</p></p>
+    </div>
+    <div id="menuSidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="habitaciones.html">Habitaciones</a>
+        <a href="restaurante.html">Restaurante</a>
+        <a href="atractivo.html">Atractivos cercanos</a>
+        <a href="ubicacion.html">Ubicación</a>
+    </div>
+    <div class="whatsapp-icon" onclick="toggleChat()">
+        <img src="whatsapp.png" alt="WhatsApp">
+        <span class="tooltip">¿Mas informacion?</span>
+    </div>
+    <div id="chatWindow" class="chat-window">
+        <div class="chat-header">
+            <h2>Consulta</h2>
+        </div>
+        <div class="chat-body">
+            <p>¿En que podemos ayudarte?</p>
+            <button onclick="openChat()">Abrir chat</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

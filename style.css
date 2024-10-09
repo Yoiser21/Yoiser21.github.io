@@ -1,0 +1,238 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: black;
+    text-align: center;
+}
+.background-image {
+    background-image: url('Portada.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Ajusta la altura de la imagen de fondo */
+    width: 100%;
+    position: relative; 
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    position: absolute; 
+    top: 0; /* Asegurar que esté en la parte superior */
+    width: 100%; /* Asegurar que ocupe todo el ancho */
+}
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+.sidebar {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 2; 
+    top: 0;
+    right: 0; 
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    overflow-x: hidden; /* Deshabilitar el scroll horizontal */
+    transition: 0.5s; /* Transición suave */
+    padding-top: 60px; 
+}
+
+.sidebar.open {
+    width: 370px; 
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.container {
+    padding: 20px;
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 80%; 
+    box-sizing: border-box; 
+}
+h1 {
+    font-size: 3em;
+    margin-top: 50px;
+}
+h2{
+    font-size: 2em;
+    margin-top: 20px;
+    color: #25d366; 
+}
+p {
+    font-size: 1.2em;
+}
+.services, .contact {
+    margin: 20px 30px; /* Ajustar el margen a 50px de izquierda y derecha */
+    text-align: justify;
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1; 
+}
+.whatsapp-icon img {
+    width: 60px;
+    height: 60px;
+}
+.whatsapp-icon:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+.whatsapp-icon .tooltip {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.whatsapp-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+.chat-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #888;
+    z-index: 1; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Bordes redondos */
+}
+.chat-header {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    border-top-left-radius: 10px; /* Bordes redondos */
+    border-top-right-radius: 10px; 
+}
+.chat-header h2{
+    color: black;
+}
+.chat-body {
+    padding: 10px;
+}
+.chat-body button {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.chat-body button:hover {
+    background-color: #1ebc59;
+}
+
+/* Media Queries */
+/* Móviles */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        top: 40%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 768px) {
+    .container {
+        width: 85%;
+        top: 45%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.75em;
+    }
+    p {
+        font-size: 1.1em;
+    }
+}
+
+/* Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 80%;
+        top: 50%;
+    }
+    h1 {
+        font-size: 2.75em;
+    }
+    h2 {
+        font-size: 1.85em;
+    }
+    p {
+        font-size: 1.15em;
+    }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+    .container {
+        width: 70%;
+        top: 50%;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+}
